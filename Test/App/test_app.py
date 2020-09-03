@@ -44,3 +44,4 @@ def test_load_movies(catalog, booksfile, tagsfile, booktagsfile):
     books = control.getBooksYear(catalog, 2008)
     assert lt.size(books) == 4
 
+print(test_load_movies(control.initCatalog(),'GoodReads/books-small.csv','GoodReads/tags.csv','GoodReads/books-small.csv'))
