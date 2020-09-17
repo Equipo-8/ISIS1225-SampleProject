@@ -124,6 +124,8 @@ def addBook(catalog, book):
     Finalmente crea una entrada en el Map de años, para indicar que este
     libro fue publicaco en ese año.
     """
+    print(book)
+    print(type(book))
     lt.addLast(catalog['books'], book)
     mp.put(catalog['bookIds'], book['goodreads_book_id'], book)
     addBookYear(catalog, book)
