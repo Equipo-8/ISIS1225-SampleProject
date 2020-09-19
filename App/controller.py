@@ -71,6 +71,8 @@ def loadBooks(catalog, booksfile):
     booksfile = cf.data_dir + booksfile
     input_file = csv.DictReader(open(booksfile,encoding="utf-8-sig"))
     for book in input_file:
+        print(book)
+        print(type(book))
         model.addBook(catalog, book)
         authors = book['authors'].split(",")  # Se obtienen los autores
         for author in authors:
